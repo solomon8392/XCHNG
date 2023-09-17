@@ -15,13 +15,31 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* 
+.wrapper{
+max-height: 100%;
+height: 288px;
+display: flex;
+width: 600%;
+overflow-x: scroll;
+overflow: hidden;
+object-fit: cover;
 }
+
+.wrapper::-webkit-scrollbar{
+  width: 0;
+}
+
+.wrapper .item{
+  line-height: 140%;
+  height: 110px;
+  margin-left: 20px;
+} */
+
+
+@media screen and (min-width: 320px) {
+  .card {
+    width: 248px;
+  }
+}
+
