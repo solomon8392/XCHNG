@@ -77,7 +77,7 @@ export default function Offerpage() {
 
            
             <Link href={{pathname: "/Transaction"}} className="flex justify-center py-5">
-      <button className="w-[65vh] h-[10vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">Make an offer</button>
+      <button className="w-[65vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">Make an offer</button>
       </Link>
       </div>
 

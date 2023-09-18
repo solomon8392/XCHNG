@@ -72,13 +72,13 @@ export default function Offerpage() {
            <div className="flex justify-center">
            <div className="grid gap-[20px]">
                 <div className="">
-                    <input placeholder="Enter Description of you NFT(s)" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[10vh] rounded-[8px] outline-none"/>
+                    <input placeholder="Enter Description of you NFT(s)" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"/>
                 </div>
                 <div className="">
-                    <input placeholder="Current value" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[10vh] rounded-[8px] outline-none"/>
+                    <input placeholder="Current value" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"/>
                 </div>
                 <div className="">
-                    <input placeholder="Additional offer" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[10vh] rounded-[8px] outline-none"/>
+                    <input placeholder="Additional offer" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"/>
                 </div>
             </div>
            </div>
