@@ -43,3 +43,11 @@ object-fit: cover;
   }
 }
 
+.open{
+  display: block;
+}
+
+.close{
+  display: none;
+}
+

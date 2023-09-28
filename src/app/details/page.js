@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function detailpage() {
   return (
@@ -12,32 +13,32 @@ export default function detailpage() {
           <h1 className="text-[17px] font-Figtree font-bold">Kanpai Panda</h1>
         </div>
         <div className="flex justify-center py-4">
-        <div className="item flex justify-center items-center bg-[#FFFFFF] w-[300px] h-[316px] rounded-[8px]">
-          <div className="">
-            <Image
-              src={require("../../../assets/Panda.png")}
-              className="w-[269px] h-[229px] rounded-[5px]"
-            />
-            <div className="py-3">
-              <li className="list-none">
-                <div className="flex gap-[19%]">
-                  <strong>Kanpai Panda</strong>
-                  <span>3,284.73 USD</span>
-                </div>
-                <div className="flex gap-[19%]">
-                  <span className="flex items-center">
-                    Kanpai Pandas
-                    <Image
-                      src={require("../../../assets/verify.png")}
-                      className="h-3"
-                    />
-                  </span>
-                  <strong>1.89 ETH</strong>
-                </div>
-              </li>
+          <div className="item flex justify-center items-center bg-[#FFFFFF] w-[300px] h-[316px] rounded-[8px]">
+            <div className="">
+              <Image
+                src={require("../../../assets/Panda.png")}
+                className="w-[269px] h-[229px] rounded-[5px]"
+              />
+              <div className="py-3">
+                <li className="list-none">
+                  <div className="flex gap-[19%]">
+                    <strong>Kanpai Panda</strong>
+                    <span>3,284.73 USD</span>
+                  </div>
+                  <div className="flex gap-[19%]">
+                    <span className="flex items-center">
+                      Kanpai Pandas
+                      <Image
+                        src={require("../../../assets/verify.png")}
+                        className="h-3"
+                      />
+                    </span>
+                    <strong>1.89 ETH</strong>
+                  </div>
+                </li>
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <div className="">
           <h5 className="text-[16px] font-Figtree text-[#5A5A58]">Ending in</h5>
@@ -73,54 +74,77 @@ export default function detailpage() {
           </p>
         </div>
         <div>
-          <h1 className="text-[16px] font-Figtree text-[#5A5A58]">Current Price</h1>
+          <h1 className="text-[16px] font-Figtree text-[#5A5A58]">
+            Current Price
+          </h1>
           <div className="grid py-2 gap-[4px]">
-            <strong className="text-[18px] text-[#080705] font-Figtree">1.89 ETH</strong>
-            <span className="text-[14px] font-Figtree text-[#080705]">3,284.73 USD</span>
+            <strong className="text-[18px] text-[#080705] font-Figtree">
+              1.89 ETH
+            </strong>
+            <span className="text-[14px] font-Figtree text-[#080705]">
+              3,284.73 USD
+            </span>
           </div>
         </div>
 
         <div className="">
-        <h1 className="text-[18px] font-Figtree text-[#080705] py-3 font-bold">Offers</h1>
-        <div className="justify-center items-center gap-2 grid">
-          <div className="flex items-center gap-[10px] bg-[#FFFFFF] px-2 rounded-[8px] w-[50vh] h-[12vh]">
-            <Image
-              src={require("../../../assets/NFT1.png")}
-              className="w-9 h-9"
-            />
-            <div className="">
-              <h1 className="text-[16px] font-Figtree text-[#080705] font-bold">Save</h1>
-              <h3 className="text-[12px] font-Figtree text-[#5A5A58]">6.10 ETH and 4 assets</h3>
+          <h1 className="text-[18px] font-Figtree text-[#080705] py-3 font-bold">
+            Offers
+          </h1>
+          <div className="justify-center items-center gap-2 grid">
+            <div className="flex items-center gap-[10px] bg-[#FFFFFF] px-2 rounded-[8px] w-[50vh] h-[12vh]">
+              <Image
+                src={require("../../../assets/NFT1.png")}
+                className="w-9 h-9"
+              />
+              <div className="">
+                <h1 className="text-[16px] font-Figtree text-[#080705] font-bold">
+                  Save
+                </h1>
+                <h3 className="text-[12px] font-Figtree text-[#5A5A58]">
+                  6.10 ETH and 4 assets
+                </h3>
+              </div>
+            </div>
+            <div className="flex items-center gap-[10px] bg-[#FFFFFF] px-2 rounded-[8px] w-[50vh] h-[12vh]">
+              <Image
+                src={require("../../../assets/NFT1.png")}
+                className="w-9 h-9"
+              />
+              <div className="">
+                <h1 className="text-[16px] font-Figtree text-[#080705] font-bold">
+                  Save
+                </h1>
+                <h3 className="text-[12px] font-Figtree text-[#5A5A58]">
+                  6.10 ETH and 4 assets
+                </h3>
+              </div>
+            </div>
+            <div className="flex items-center gap-[10px] bg-[#FFFFFF] px-2 rounded-[8px] w-[50vh] h-[12vh]">
+              <Image
+                src={require("../../../assets/NFT1.png")}
+                className="w-9 h-9"
+              />
+              <div className="">
+                <h1 className="text-[16px] font-Figtree text-[#080705] font-bold">
+                  Save
+                </h1>
+                <h3 className="text-[12px] font-Figtree text-[#5A5A58]">
+                  6.10 ETH and 4 assets
+                </h3>
+              </div>
             </div>
           </div>
-          <div className="flex items-center gap-[10px] bg-[#FFFFFF] px-2 rounded-[8px] w-[50vh] h-[12vh]">
-            <Image
-              src={require("../../../assets/NFT1.png")}
-              className="w-9 h-9"
-            />
-            <div className="">
-              <h1 className="text-[16px] font-Figtree text-[#080705] font-bold">Save</h1>
-              <h3 className="text-[12px] font-Figtree text-[#5A5A58]">6.10 ETH and 4 assets</h3>
-            </div>
-          </div>
-          <div className="flex items-center gap-[10px] bg-[#FFFFFF] px-2 rounded-[8px] w-[50vh] h-[12vh]">
-            <Image
-              src={require("../../../assets/NFT1.png")}
-              className="w-9 h-9"
-            />
-            <div className="">
-              <h1 className="text-[16px] font-Figtree text-[#080705] font-bold">Save</h1>
-              <h3 className="text-[12px] font-Figtree text-[#5A5A58]">6.10 ETH and 4 assets</h3>
-            </div>
-          </div>
+          <Link
+            href={{ pathname: "/Offerpage" }}
+            className="flex justify-center py-5"
+          >
+            <button className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
+              Make an offer
+            </button>
+          </Link>
         </div>
-      <Link href={{pathname: "/Offerpage"}} className="flex justify-center py-5">
-      <button className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">Make an offer</button>
-      </Link>
       </div>
-      </div>
-
-
     </section>
   );
 }

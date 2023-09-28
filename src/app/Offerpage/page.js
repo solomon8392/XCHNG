@@ -1,45 +1,54 @@
+"use client";
+
+import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import "../globals.css";
 
-export default function Offerpage() {
+function Offerpage() {
+  const [showmodel, setshowmodel] = useState(false);
+
   return (
     <section className="bg-[#F1F1F1] h-full w-full px-4">
       <div className="py-4  gap-9">
         <div className="flex gap-[14px] items-center">
           <div className="w-9 h-9 rounded-full bg-[#D0E1DA] flex justify-center items-center">
-            <Link href={{pathname: "/details"}} className="">
-            <Image src={require("../../../assets/arrow.png")} className="h-4" />
+            <Link href={{ pathname: "/details" }} className="">
+              <Image
+                src={require("../../../assets/arrow.png")}
+                className="h-4"
+              />
             </Link>
           </div>
           <h1 className="text-[17px] font-Figtree font-bold">Make an Offer</h1>
         </div>
         <div className="flex justify-center py-4">
-        <div className="item flex justify-center items-center bg-[#FFFFFF] w-[300px] h-[316px] rounded-[8px]">
-          <div className="">
-            <Image
-              src={require("../../../assets/Panda.png")}
-              className="w-[269px] h-[229px] rounded-[5px]"
-            />
-            <div className="py-3">
-              <li className="list-none">
-                <div className="flex gap-[19%]">
-                  <strong>Kanpai Panda</strong>
-                  <span>3,284.73 USD</span>
-                </div>
-                <div className="flex gap-[19%]">
-                  <span className="flex items-center">
-                    Kanpai Pandas
-                    <Image
-                      src={require("../../../assets/verify.png")}
-                      className="h-3"
-                    />
-                  </span>
-                  <strong>1.89 ETH</strong>
-                </div>
-              </li>
+          <div className="item flex justify-center items-center bg-[#FFFFFF] w-[300px] h-[316px] rounded-[8px]">
+            <div className="">
+              <Image
+                src={require("../../../assets/Panda.png")}
+                className="w-[269px] h-[229px] rounded-[5px]"
+              />
+              <div className="py-3">
+                <li className="list-none">
+                  <div className="flex gap-[19%]">
+                    <strong>Kanpai Panda</strong>
+                    <span>3,284.73 USD</span>
+                  </div>
+                  <div className="flex gap-[19%]">
+                    <span className="flex items-center">
+                      Kanpai Pandas
+                      <Image
+                        src={require("../../../assets/verify.png")}
+                        className="h-3"
+                      />
+                    </span>
+                    <strong>1.89 ETH</strong>
+                  </div>
+                </li>
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <div className="">
           <h5 className="text-[16px] font-Figtree text-[#5A5A58]">Ending in</h5>
@@ -69,25 +78,78 @@ export default function Offerpage() {
           </div>
         </div>
 
-           <div className="flex justify-center">
-           <div className="grid gap-[20px]">
-                <div className="">
-                    <input placeholder="Enter Description of you NFT(s)" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"/>
-                </div>
-                <div className="">
-                    <input placeholder="Current value" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"/>
-                </div>
-                <div className="">
-                    <input placeholder="Additional offer" className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"/>
-                </div>
+        <div className="flex justify-center">
+          <div className="grid gap-[20px]">
+            <div className="">
+              <input
+                placeholder="Enter Description of you NFT(s)"
+                className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"
+              />
             </div>
-           </div>
+            <div className="">
+              <input
+                placeholder="Current value"
+                className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"
+              />
+            </div>
+            <div className="">
+              <input
+                placeholder="Additional offer"
+                className="w-[51vh] border-[1px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-            <Link href={{pathname: "/Notification"}} className="flex justify-center py-5">
-      <button className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">Make an offer</button>
+      <Link
+        href={{ pathname: "/Notification" }}
+        className="flex justify-center py-5"
+      >
+        <button
+          onClick={() => setshowmodel(true)}
+          className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]"
+        >
+          Make an offer
+        </button>
       </Link>
 
-
+      <div className={!showmodel ? "open" : "close"}>
+        <Image
+          src={require("../../../assets/vector.png")}
+          className="float-right"
+        />
+        <div className="flex justify-center items-center w-full">
+          <div className="grid">
+            <div className="flex justify-center relative top-36">
+              <Image
+                src={require("../../../assets/Successful1.png")}
+                className=""
+              />
+            </div>
+            <div className="flex justify-center w-full">
+              <div className="grid absolute bottom-[37vh]">
+                <h1 className="text-center text-[18px] text-[#080705] font-Figtree font-semibold">
+                  Successful
+                </h1>
+                <h2 className="text-[16px] text-[#5A5A58] font-Figtree font-medium">
+                  Your offer was sent successfully
+                </h2>
+              </div>
+              <Link
+                href={{ pathname: "/Home" }}
+                className="absolute bottom-[25%]"
+              >
+                {/* <a href="../ " className=""></a> */}
+                <button className="w-[50vh] h-[8vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
+                  Go back to Home
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
+
+export default Offerpage();
