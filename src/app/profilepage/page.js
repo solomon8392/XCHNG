@@ -1,10 +1,10 @@
 import Image from "next/image";
-// import Link from "next/link"
+import Bottomnavpage from "@/app/components/bottom-nav";
 
 export default function Transactionpage() {
   return (
-    <section className="px-4 bg-[#F1F1F1] h-screen py-4 w-full">
-      <div className="">
+    <section className="bg-[#F1F1F1] w-full">
+      <div className="py-9 px-4">
         <h1 className="text-[24px] text-[#080705] text-Figtree">Profile</h1>
         <div className="flex justify-center">
           <div className="">
@@ -15,7 +15,7 @@ export default function Transactionpage() {
               </h1>
               <h1 className="text-[14px] items-center text-center font-Figtree text-[#5A5A58]">
                 Your crypto wallet securely stores your <br /> digital and
-                crypto currencies.{" "}
+                crypto currencies.
               </h1>
             </div>
           </div>
@@ -53,6 +53,7 @@ export default function Transactionpage() {
           </div>
         </div>
       </div>
+      <Bottomnavpage />
     </section>
   );
 }

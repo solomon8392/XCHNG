@@ -44,10 +44,32 @@ object-fit: cover;
 }
 
 .open{
-  display: block;
+  display: none;
 }
 
 .close{
-  display: none;
+  display: block;
+}
+
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  position: absolute;
+  top: 41%;
+  right: 35%;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(900deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 

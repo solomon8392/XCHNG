@@ -1,13 +1,17 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../globals.css";
 
 function Offerpage() {
-  const [showmodel, setshowmodel] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  function Toggle() {
+    setShowModal(!showModal);
+  }
 
+  const [colorToggle, unToggle] = useState(false);
   return (
     <section className="bg-[#F1F1F1] h-full w-full px-4">
       <div className="py-4  gap-9">
@@ -72,7 +76,10 @@ function Offerpage() {
               </span>
             </div>
             <div className="">
-              <Image src={require("../../../assets/Rounded.png")} />
+              <Image
+                style={{ color: "red" }}
+                src={require("../../../assets/Rounded.png")}
+              />
               <h2 className="text-[14px]">1.2K</h2>
             </div>
           </div>
@@ -101,49 +108,47 @@ function Offerpage() {
           </div>
         </div>
       </div>
-      <Link
-        href={{ pathname: "/Notification" }}
-        className="flex justify-center py-5"
-      >
-        <button
-          onClick={() => setshowmodel(true)}
-          className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]"
-        >
+      <div onClick={() => setShowModal(true)} className="py-9">
+        <button className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
           Make an offer
         </button>
-      </Link>
+      </div>
 
-      <div className={!showmodel ? "open" : "close"}>
-        <Image
-          src={require("../../../assets/vector.png")}
-          className="float-right"
-        />
-        <div className="flex justify-center items-center w-full">
-          <div className="grid">
-            <div className="flex justify-center relative top-36">
-              <Image
-                src={require("../../../assets/Successful1.png")}
-                className=""
-              />
-            </div>
-            <div className="flex justify-center w-full">
-              <div className="grid absolute bottom-[37vh]">
-                <h1 className="text-center text-[18px] text-[#080705] font-Figtree font-semibold">
-                  Successful
-                </h1>
-                <h2 className="text-[16px] text-[#5A5A58] font-Figtree font-medium">
-                  Your offer was sent successfully
-                </h2>
+      <div className={!showModal ? "open : bg-[red]" : "close"}>
+        <div classname="bg-black">
+          <div className="" onClick={Toggle}>
+            <Image
+              src={require("../../../assets/vector.png")}
+              className="float-left absolute top-[22vh] left-[50vh]"
+            />
+          </div>
+          <div className="flex justify-center items-center w-full">
+            <div className="grid">
+              <div className="absolute right-[15vh] top-[26vh]">
+                <Image
+                  src={require("../../../assets/Successful1.png")}
+                  className=""
+                />
               </div>
-              <Link
-                href={{ pathname: "/Home" }}
-                className="absolute bottom-[25%]"
-              >
-                {/* <a href="../ " className=""></a> */}
-                <button className="w-[50vh] h-[8vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
-                  Go back to Home
-                </button>
-              </Link>
+              <div className="flex justify-center w-full">
+                <div className="grid absolute bottom-[37vh]">
+                  <h1 className="text-center text-[18px] text-[#080705] font-Figtree font-semibold">
+                    Successful
+                  </h1>
+                  <h2 className="text-[16px] text-[#5A5A58] font-Figtree font-medium">
+                    Your offer was sent successfully
+                  </h2>
+                </div>
+                <Link
+                  href={{ pathname: "/Home" }}
+                  className="absolute bottom-[25%]"
+                >
+                  {/* <a href="../ " className=""></a> */}
+                  <button className="w-[50vh] h-[8vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
+                    Go back to Home
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -152,4 +157,4 @@ function Offerpage() {
   );
 }
 
-export default Offerpage();
+export default Offerpage;

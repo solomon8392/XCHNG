@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import Bottomnavpage from "../components/bottom-nav";
 export default function addnewpage() {
   return (
-    <section className="bg-[#F1F1F1] h-full py-4 w-full px-4">
-      <div className="">
+    <section className="bg-[#F1F1F1] h-full w-full">
+      <div className="px-4 py-2">
         <h1 className="text-[24px] text-[#080705] font-Figtree">Add new</h1>
-        <div className="py-5">
+        <div className="py-2">
           <div className="">
             <input
               placeholder="Name of NFT"
@@ -59,11 +59,12 @@ export default function addnewpage() {
           href={{ pathname: "/addnew" }}
           className="flex justify-center py-1"
         >
-          <button className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
+          <button className="w-[51vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
             Submit
           </button>
         </Link>
       </div>
+      <Bottomnavpage />
     </section>
   );
 }

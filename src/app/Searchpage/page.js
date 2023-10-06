@@ -1,24 +1,41 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Bottomnavpage from "@/app/components/bottom-nav";
 
-export default function Transactionpage() {
+export default function Searchpage() {
   return (
-    <section className="bg-[#F1F1F1] h-full py-4 w-full px-4">
-      <div className="">
-        <div className="flex gap-[14px] items-center">
-          <Link
-            href={{ pathname: "/offer" }}
-            className="w-9 h-9 rounded-full bg-[#D0E1DA] flex justify-center items-center"
-          >
-            <Image src={require("../../../assets/arrow.png")} className="h-4" />
-          </Link>
-          <h1 className="text-[17px] font-Figtree font-bold">Make an Offer</h1>
+    <section className="bg-[#F1F1F1] h-full w-full">
+      <div className="px-4 py-2">
+        <h1 className="text-[24px] text-[#080705] font-Figtree">Search</h1>
+        <div className="py-2">
+          <input
+            placeholder="Search NFTs"
+            className="w-[51vh] border-[1px] border-[#5A5A58] text-[#5A5A58] text-[14px] font-Figtree px-4 h-[8vh] rounded-[8px] outline-none"
+          />
         </div>
-        <div className="py-4">
-          <div className="grid grid-cols-2 justify-items-center items-center gap-3 m-0 p-0">
+        <div className="py-3">
+          <h1 className="text-[18px] text-[#080705] font-Figtree">
+            Categories
+          </h1>
+          <div className="py-3">
+            <div className="relative">
+              <Image
+                className="bg-[#141419]  w-[168px] rounded-[8px] h-[144px]"
+                src={require("../../../assets/photonft.png")}
+              />
+              <div className="left-[35px] absolute bottom-[35px]">
+                <h1 className="text-[#FFF] font-Figtree font-[18px]">
+                  Photography
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <h1 className="text-[18px] text-[#080705] font-Figtree">
+            Popular Searches
+          </h1>
+
+          <div className="grid grid-cols-2 justify-items-center items-center gap-3">
             <div className="grid justify-center items-center bg-[#FFFFFF] w-[143px] h-[175px] rounded-[4px]">
               <Image
                 src={require("../../../assets/NFT2.png")}
@@ -76,37 +93,9 @@ export default function Transactionpage() {
               </div>
             </div>
           </div>
-          <div className="py-4 grid gap-y-[20px] justify-center">
-            <div className="flex gap-[20px] items-center">
-              <input
-                placeholder="Recipient’s address"
-                className="w-[40vh] text-[#5A5A58] font-Figtree text-[14px] border-[1px] border-[#5A5A58] px-4 h-[8vh] rounded-[8px] outline-none"
-              />
-              <Image
-                src={require("../../../assets/scan.png")}
-                className="w-6 h-6"
-              />
-            </div>
-            <div className="grid gap-[8px]">
-              <input
-                placeholder="Amount"
-                className="w-[51vh] border-[1px] text-[#5A5A58] font-Figtree text-[14px] border-[#5A5A58] px-4 h-[9vh] rounded-[8px] outline-none"
-              />
-              <h1 className="text-[#31302F] text-[14px] font-Figtree">
-                Charges ~$0.05
-              </h1>
-            </div>
-          </div>
         </div>
-        <Link
-          href={{ pathname: "/Transactionpage" }}
-          className="flex justify-center py-5"
-        >
-          <button className="w-[50vh] h-[9vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
-            Next
-          </button>
-        </Link>
       </div>
+      <Bottomnavpage />
     </section>
   );
 }

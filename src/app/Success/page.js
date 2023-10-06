@@ -23,7 +23,7 @@ export default function Successpage() {
         </div>
       </div>
       <div className="flex justify-center">
-        <Link href={{ pathname: "/Frame70" }} className="absolute bottom-5">
+        <Link href={{ pathname: "/Home" }} className="absolute bottom-5">
           <button className="w-[50vh] h-[8vh] text-[#FFFFFF] font-Figtree text-[16px] rounded-[8px] bg-[#146B48]">
             Go back to Home
           </button>

@@ -7,9 +7,12 @@ export default function detailpage() {
     <section className="bg-[#F1F1F1] h-full w-full px-4">
       <div className="py-4  gap-9">
         <div className="flex gap-[14px] items-center">
-          <div className="w-9 h-9 rounded-full bg-[#D0E1DA] flex justify-center items-center">
+          <Link
+            href={{ pathname: "/Home" }}
+            className="w-9 h-9 rounded-full bg-[#D0E1DA] flex justify-center items-center"
+          >
             <Image src={require("../../../assets/arrow.png")} className="h-4" />
-          </div>
+          </Link>
           <h1 className="text-[17px] font-Figtree font-bold">Kanpai Panda</h1>
         </div>
         <div className="flex justify-center py-4">
