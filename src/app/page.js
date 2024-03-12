@@ -1,8 +1,6 @@
 'use client'
 import Image from "next/image"
-// import Link from "next/link"
 import "./globals.css"
-// import Successpage from "./Success/page"
 import Onbordpage from "./Onbordpage/page"
 import { useEffect, useState } from "react"
 
@@ -24,10 +22,13 @@ function page() {
                   />
             </div>
               <div className="absolute top-[62%] left-0 right-0">
-            <h1 className="flex justify-center">Hello world</h1>
+            <h1 className="flex justify-center">XCHNG</h1> 
+              <div></div>
+              
+              
               </div>
 
-            </div>:<Onbordpage/>}
+            </div>: <Onbordpage/>}
           </div>
       </section>
     )

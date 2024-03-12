@@ -32,7 +32,7 @@ export default function Transactionpage() {
             </div>
             <div className="grid">
               <span className="text-[18px] text-[#080705] font-Figtree font-semibold">
-                Kawamii #773
+                Kawamii #773                                                              
               </span>
               <span className="text-[18px] text-[#080705] font-Figtree font-semibold">
                 0.25 ETH
@@ -40,7 +40,7 @@ export default function Transactionpage() {
               <div className="grid gap-[3vh] py-4">
                 <div className="flex justify-between border-b-[1px] border-[#6A6A76] ">
                   <span className="text-[#5A5A58] text-[16px] font-Figtree">
-                    From
+                    From 
                   </span>
                   <span className="text-[#080705] text-[16px] font-Figtree">
                     wgqe...QWIRFKJJPOEF
